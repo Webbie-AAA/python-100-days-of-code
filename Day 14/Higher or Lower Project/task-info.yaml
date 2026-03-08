@@ -12,6 +12,18 @@ files:
   - name: game_data.py
     visible: true
     learner_created: false
-status: Unchecked
+  - name: test.py
+    visible: true
+    learner_created: true
+  - name: test_info.py
+    visible: true
+    learner_created: true
+  - name: testing_errors.py
+    visible: true
+    learner_created: true
+  - name: conftest.py
+    visible: true
+    learner_created: true
+status: Solved
 record: -1
 post_submission_on_open: true
