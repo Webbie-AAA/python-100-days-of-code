@@ -32,7 +32,8 @@ resources = {
 
 # TODO: 1. Prompt user for what they would like
 
-user_prompt = input("What would you like? (espresso/latte/cappuccino/report): ")
+user_prompt = input("What would you like? (espresso/latte/cappuccino/report): ").strip().lower()
+
 
 # TODO: 2. If user enters 'report' return the report.
 
@@ -45,5 +46,42 @@ def display_report():
             print(f"{key}: {item}ml")
     print(f"Money: ${money}")
 
-display_report()
+
+# TODO: 3. If user asks for drink display price
+
+def display_drink_price(drink:str) -> str:
+        print(f"The price of an {drink} is ${MENU[drink]['cost']}")
+
+
+# TODO: 4. Prompt user for quarters, dimes, nickles, and pennies
+
+if user_prompt == "report":
+    display_report()
+elif user_prompt in ("espresso", "latte", "cappuccino"):
+    display_drink_price(user_prompt)
+    print("Please insert coins.")
+    quarters = input("how many quarters?: ")
+    dimes = input("how many dimes?: ")
+    nickles = input("how many nickles?: ")
+    pennies = input("How many pennies?: ")
+elif user_prompt == "off":
+    exit()
+
+# TODO: 5. Check resources sufficient
+
+def total_ml_of_liquids(ingredients:dict) -> int:
+    total = 0
+    total += ingredients['water']
+    total += ingredients['milk']
+    return total
+
+
+def sufficient_resources_check(drink):
+    ...
+
+
+
+
+
+
 
