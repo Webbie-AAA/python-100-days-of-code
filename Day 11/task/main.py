@@ -55,6 +55,9 @@ def calculate_win_or_loss(user_total_points, dealer_total_points):
     elif user_total_points > 21:
         win_loss_message()
         print(f"{user_name} loses")
+    elif dealer_total_points > 21:
+        win_loss_message()
+        print(f"{user_name} wins")
     elif user_total_points < 21 and user_total_points > dealer_total_points:
         win_loss_message()
         print(f"{user_name} wins")
@@ -63,7 +66,7 @@ def calculate_win_or_loss(user_total_points, dealer_total_points):
         print(f"It's a draw {user_name}")
     else:
         win_loss_message()
-        print(f"{user_name} lose")
+        print(f"{user_name} loses")
 
 
 def play():
@@ -89,13 +92,9 @@ def play():
             break
     calculate_win_or_loss(count_total_points(user_hand), count_total_points(dealer_hand))
 
-
-
-
 game_play = True
 while game_play:
     start_stop_game = input("\nDo you want to play a game of Blackjack? Type 'y' or 'n'?:  ").lower().strip()
-
     if start_stop_game == "y":
         user_name = input("Type your name to begin:\t")
         user_hand = {"name": user_name, "hand": []}

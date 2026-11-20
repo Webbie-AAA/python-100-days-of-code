@@ -9,6 +9,12 @@ files:
   - name: art.py
     visible: true
     learner_created: false
-status: Unchecked
+  - name: .venv/bin/numpy-config
+    visible: true
+    learner_created: true
+  - name: .venv/bin/f2py
+    visible: true
+    learner_created: true
+status: Solved
 record: -1
 post_submission_on_open: true
