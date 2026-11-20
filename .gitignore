@@ -25,3 +25,6 @@ dist-ssr
 
 *.yaml
 *.yml
+
+
+__pycache__
