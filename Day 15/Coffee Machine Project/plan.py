@@ -37,7 +37,6 @@ usa_coins ={
     "pennies": 0.01
 }
 
-user_money = 0
 
 profit = 0
 
@@ -133,17 +132,18 @@ def sufficient_resources_check():
 
 # TODO: 8. Connect All Coffee Machine Logic
 
-while True: 
+# while True: 
     
-    if user_prompt == "report":
-        display_report()
-    elif user_prompt in ("espresso", "latte", "cappuccino"):
-        display_drink_price(user_prompt)
-        print("Please insert coins.")
-        quarters = input("how many quarters?: ")
-        dimes = input("how many dimes?: ")
-        nickles = input("how many nickles?: ")
-        pennies = input("How many pennies?: ")
-    elif user_prompt == "off":
-        exit()
+#     if user_prompt == "report":
+#         display_report()
+#     elif user_prompt in ("espresso", "latte", "cappuccino"):
+#         display_drink_price(user_prompt)
+#         print("Please insert coins.")
+#         quarters = input("how many quarters?: ")
+#         dimes = input("how many dimes?: ")
+#         nickles = input("how many nickles?: ")
+#         pennies = input("How many pennies?: ")
+#     elif user_prompt == "off":
+#         exit()
 
+print([resources])
